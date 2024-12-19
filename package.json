@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "WebGL based car configurator using threeJS",
   "main": "app.js",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack",
-    "build-css": "node-sass src/sass/style.scss src/static/css/style.css --output-style compressed"
+    "build-css": "node-sass src/sass/style.scss src/static/css/style.css --output-style compressed",
+    "vercel-build": "npm run build-css && npm run build"
   },
   "repository": {
     "type": "git",
